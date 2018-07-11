@@ -47,8 +47,7 @@ export default {
     init () {
       this.local_list = this.$store.state.list
     },
-    add_text (id,title) {
-      console.log(id, title);
+    add_text (id, title) {
       this.$store.dispatch('ADD_TEXT', {
         id,
         title
@@ -56,10 +55,10 @@ export default {
     },
     add_input () {
       this.input_lock = !this.input_lock
-      var id = '';
+      var id = ''
       var str = '7418520963'
       for (var i = 0; i < 8; i++) {
-          id += str[~~(Math.random() * str.length)]
+        id += str[~~(Math.random() * str.length)]
       }
       this.local_list.push({
         id,
@@ -68,6 +67,7 @@ export default {
     },
     dele_text (id) {
       console.log(id)
+      this.local_list = this.local_list.filter(item => item.id !== id)
       this.$store.dispatch('DELE_TEXT', id)
       this.input_lock = !this.input_lock
     }

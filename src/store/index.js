@@ -23,8 +23,6 @@ const actions = {
     commit('ADD_TEXT', payload)
   },
   DELE_TEXT ({commit}, payload) {
-    console.log(payload);
-    
     commit('DELE_TEXT', payload)
   }
 }
