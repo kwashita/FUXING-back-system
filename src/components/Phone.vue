@@ -6,6 +6,12 @@
           <p>{{item.title}}</p>
           <!-- {{item}} -->
         </li>
+        <li>
+          <img src="" alt="">
+        </li>
+        <li>
+          <p></p>
+        </li>
       </ul>
       <!-- {{$store.state.list}} -->
     </div>
