@@ -1,33 +1,26 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import DataOverview from '../components/DataOverview.vue'
-// import WelfareEnterprise from '../components/WelfareEnterprise.vue'
-import Welfaremanagement from '../components/Welfaremanagement.vue'
-import Fuliguanli from '../components/fuliguanli.vue'
-import WelfareDetails from '../components/WelfareDetails.vue'
+import sysData from '../views/sysData.vue'
+import adminManage from '../views/adminManage.vue'
+import detailsDefault from '../views/detailsDefault.vue'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/dataOverview',
-      name: 'DataOverview',
-      component: DataOverview
+      path: '/sysData',
+      name: 'sysData',
+      component: sysData
     },
     {
-      path: '/welfaremanagement',
-      name: 'Welfaremanagement',
-      component: Welfaremanagement
+      path: '/adminManage',
+      name: 'adminManage',
+      component: adminManage
     },
     {
-      path: '/fuliguanli',
-      name: 'fuliguanli',
-      component: Fuliguanli
-    },
-    {
-      path: '/welfareDetails',
-      name: 'welfareDetails',
-      component: WelfareDetails
+      path: '/detailsDefault',
+      name: 'detailsDefault',
+      component: detailsDefault
     }
   ]
 })

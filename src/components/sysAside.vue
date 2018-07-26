@@ -1,12 +1,12 @@
 <style lang='stylus'>
-.logo{
+.logo {
   height: 79px;
   background: #F33E46;
-  line-height 79px;
+  line-height: 79px;
   color: #ffffff;
   font-size: 18px;
 
-  img:nth-child(1){
+  img:nth-child(1) {
     width: 54px;
     height: 54px;
     border-radius: 50%;
@@ -15,30 +15,37 @@
     vertical-align: middle;
     margin-left: 14px;
     margin-right: 0;
+  }
 }
-}
-.el-aside img{
+
+.el-aside img {
   margin-right: 18px;
   margin-left: 14px;
 }
-.el-menu-item-group ul li{
+
+.el-menu-item-group ul li {
   background: #283246 !important;
-  &:hover{
+
+  &:hover {
     background: #32435F !important;
   }
 }
-.el-menu-item{
+
+.el-menu-item {
   text-indent: 4.5em;
 }
-.el-submenu__title{
+
+.el-submenu__title {
   border-bottom: 2px solid #20314D;
 }
-.el-menu-item-group__title{
+
+.el-menu-item-group__title {
   padding-top: 0px;
   height: 0px;
-  display none;
+  display: none;
 }
-.el-menu-item.is-active{
+
+.el-menu-item.is-active {
   border-right: 6px solid #F23E46;
 }
 </style>
@@ -59,14 +66,11 @@
     <div class='logo'>
       <img src="" alt="">
       福星社管理平台</div>
-      <el-submenu index="1">
-        <template slot="title">
-          <img src="../assets/icons/aside/data_wei.png" alt="" ref='img_1'>数据概览</template>
-        <el-menu-item-group>
-          <el-menu-item index="1-1">选项1</el-menu-item>
-          <el-menu-item index="1-2">选项2</el-menu-item>
-        </el-menu-item-group>
-      </el-submenu>
+      <el-menu-item index="/sysData"  style='margin-left: -65px;'>
+        <span slot="title" @click='sysData_span()'>
+          <img src="../assets/icons/aside/data_wei.png" alt="" ref='img_1'>
+          数据概览</span>
+      </el-menu-item>
       <el-submenu index="2">
         <template slot="title">
           <img src="../assets/icons/aside/enterprise_wei.png" alt="" ref='img_2'>福利企业</template>
@@ -79,8 +83,8 @@
         <template slot="title">
           <img src="../../static/icons/aside/manage_xuan.png" alt="" ref='img_3'>福利管理</template>
       <el-menu-item-group>
-        <el-menu-item index="/welfaremanagement">福利管理1</el-menu-item>
-        <el-menu-item index="/welfareDetails">选项2</el-menu-item>
+        <el-menu-item index="/adminManage">福利管理</el-menu-item>
+        <el-menu-item index="/">选项2</el-menu-item>
       </el-menu-item-group>
       </el-submenu>
       <el-submenu index="4">
@@ -162,6 +166,17 @@ export default {
     }
   },
   methods: {
+    sysData_span () {
+      this.$refs.img_1.src = DATA_CHANGE_IMG
+      this.$refs.img_2.src = ENTERPRISE_IMG
+      this.$refs.img_3.src = MANAGE_IMG
+      this.$refs.img_4.src = COMMISSION_IMG
+      this.$refs.img_5.src = ORDER_IMG
+      this.$refs.img_6.src = COUPON_IMG
+      this.$refs.img_7.src = FINANCE_IMG
+      this.$refs.img_8.src = CORE_IMG
+      this.$refs.img_9.src = SYSTEM_IMG
+    },
     handleOpen (key, keyPath) {
       this.a = parseInt(key)
       switch (this.a) {

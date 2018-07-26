@@ -32,7 +32,7 @@
 </el-row>
 </template>
 <script>
-import recharge from './Recharge'
+import recharge from '../views/Recharge'
 export default {
   components: {
     recharge

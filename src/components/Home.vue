@@ -1,7 +1,7 @@
 <template>
 <el-container>
   <el-aside width="230px" style="background-color: #263753">
-    <navmenu></navmenu>
+    <sys-aside></sys-aside>
   </el-aside>
   <el-container>
     <el-header style='
@@ -9,7 +9,7 @@
       background-color: #ffffff;
       border-bottom: 1px solid #E7EBEC'
     >
-      <navheaderfir></navheaderfir>
+      <sys-head></sys-head>
     </el-header>
     <el-header style='
       height: 40px;
@@ -17,7 +17,7 @@
       text-align: start;
       border-bottom: 1px solid #E7EBEC'
     >
-      <currentlocation></currentlocation>
+      <sys-location></sys-location>
     </el-header>
     <el-main style='background-color: #F3F6FA;'>
       <router-view></router-view>
@@ -26,14 +26,14 @@
 </el-container>
 </template>
 <script>
-import navmenu from '../components/NavMenu'
-import navheaderfir from './NavHeaderFir'
-import currentlocation from './CurrentLocation'
+import sysAside from './sysAside'
+import sysHead from './sysHead'
+import sysLocation from './sysLocation'
 export default {
   components: {
-    navmenu,
-    navheaderfir,
-    currentlocation
+    sysAside,
+    sysHead,
+    sysLocation
   }
 }
 </script>

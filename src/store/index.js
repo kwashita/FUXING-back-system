@@ -7,7 +7,7 @@ const state = {
   list: [
     {id: 1, title: '你吃'},
     {id: 1, title: '你好'},
-    {id: 1, title: '../..//.//.'},
+    {id: 1, title: '../..//.//.'}
   ]
 
 }
